@@ -5,6 +5,7 @@ public class DataType {
         System.out.println("Testing Java standard data type");
         //dt.testIntegerDataType();
         //dt.testBooleanDataType();
+        maxIntTest();
     }
 
     public void testIntegerDataType(){
@@ -39,5 +40,9 @@ public class DataType {
     }
     static  {
         System.out.println("is it run before main() method?");
+    }
+
+    public static void maxIntTest() {
+        System.out.println("max int is " + (int)0x7fffffff);
     }
 }
