@@ -3,7 +3,7 @@ public class DataType {
     public static void main(String[] args){
         DataType dt = new DataType();
         System.out.println("Testing Java standard data type");
-        //dt.testIntegerDataType();
+        dt.testIntegerDataType();
         //dt.testBooleanDataType();
         maxIntTest();
     }
@@ -15,12 +15,14 @@ public class DataType {
         int sum = max + min;
         int sub = max - min;
         int multiplation = max + 1;
+        int two = -2;
         System.out.println("a = " + a);
         System.out.println("max int is " + max);
         System.out.println("min int is " + min);
         System.out.println("max + min is " + sum);
         System.out.println("max - min is " + sub);
         System.out.println("max * 2 is " + multiplation);
+        System.out.println("-2 is " + Integer.toHexString(two));
 
         short s = (short)0x8079;
         System.out.println("s is " + Integer.toHexString(s));
