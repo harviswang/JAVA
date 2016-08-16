@@ -13,32 +13,46 @@ class Account {
 		this.amount = amount;
 	}
 	
-	synchronized public void deposit(float amt) {
-		float tmp = amount;
-		tmp += amt;
-		
+	/* synchronized */ public void deposit(float amt) {
+//		float tmp = amount;
+//		tmp += amt;
+//
+	    if (amt > 0.0) {
+	        updateBalance(amt);
+	    } else {
+	        System.out.println("argument can not be negative");
+	    }
 		try {
-			Thread.sleep(DELAY_MILLISECOND);
+			Thread.sleep((long)Math.random());
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		amount = tmp;
+//		amount = tmp;
 	}
 	
-	synchronized public void withdraw(float amt) {
-		float tmp = amount;
-		tmp -= amt;
-		
+	/* synchronized */ public void withdraw(float amt) {
+//		float tmp = amount;
+//		tmp -= amt;
+//		
+       if (amt > 0.0) {
+            updateBalance(-1.0f * amt);
+        } else {
+            System.out.println("argument can not be negative");
+        }
 		try {
-			Thread.sleep(DELAY_MILLISECOND);
+			Thread.sleep((long)Math.random());
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		
-		amount = tmp;
+//		
+//		amount = tmp;
 	}
 	
 	public float getBalance() {
 		return amount;
+	}
+	
+	synchronized public void updateBalance(float delta) {
+	    amount += delta;
 	}
 }
