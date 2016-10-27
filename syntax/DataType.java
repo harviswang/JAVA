@@ -1,3 +1,6 @@
+/*
+ * java 通过方法名和参数来唯一确定一个方法(或者说message), 与方法返回值类型无关
+ */
 public class DataType {
 
     public static void main(String[] args){
@@ -6,6 +9,32 @@ public class DataType {
         dt.testIntegerDataType();
         //dt.testBooleanDataType();
         maxIntTest();
+        dt.testPrimaryDataType();
+    }
+
+    /**
+     * boolean
+     * char
+     * byte
+     * short
+     * int
+     * long
+     * float
+     * double
+     * String
+    */
+    public void testPrimaryDataType() {
+        boolean ok = false;
+        System.out.println(boolean.class.getClass().toString());
+        System.out.println(char.class.getClass().toString());
+        System.out.println(byte.class.getClass().toString());
+        System.out.println(short.class.getClass().toString());
+        System.out.println(int.class.getClass().toString());
+        System.out.println(long.class.getClass().toString());
+        System.out.println(float.class.getClass().toString());
+        System.out.println(double.class.getClass().toString());
+        System.out.println(String.class.getClass().toString());
+        System.out.println(Boolean.TYPE);
     }
 
     public void testIntegerDataType(){

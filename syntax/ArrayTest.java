@@ -1,10 +1,10 @@
 import java.util.Arrays;
 import java.util.ArrayList;
-import java.util.List;
 
 public class ArrayTest {
 	public static void main(String[] args) {
 		System.out.println("ArrayTest");
+		zeroLengthArrayTest();
 		arrayDeclareTest();
 		arrayToArrayListTest();
 		arrayContainOfTest();
@@ -12,6 +12,19 @@ public class ArrayTest {
 		arrayListToArrayTest();
 	}
 	
+        /**
+         * Array store references only, not only Array but all others
+         */
+	public static void zeroLengthArrayTest() {
+	    char[] charArray = new char[0];
+	    System.out.println("charArray.length = " + charArray.length);
+	    charArray = new char[5];
+	    for (int i = 0; i < charArray.length; i++) {
+	        charArray[i] = 'X';
+	    }
+	    System.out.println("charArray.length = " + charArray.length);
+	}
+
 	// Array Declaration
 	public static void arrayDeclareTest() {
 	    String[] sArray = new String[5]; // all are null
