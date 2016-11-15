@@ -9,9 +9,14 @@ public class IfElse2 {
         }
     }
 
+    static boolean isBetween(int testval, int begin, int end) {
+        return (testval > begin) && (testval < end);
+    }
+
     public static void main(String[] args) {
         System.out.println(test(10, 5));
         System.out.println(test(5, 10));
         System.out.println(test(5, 5));
+        System.out.println(isBetween(6, 5, 8));
     }
 }
