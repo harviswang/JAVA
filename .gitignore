@@ -1,2 +1,5 @@
 *.class
 *~
+*.o
+*.so
+test/

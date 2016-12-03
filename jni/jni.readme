@@ -1,0 +1,17 @@
+JNI(Java Native Interface)
+--------------------
+参考: http://docs.oracle.com/javase/7/docs/technotes/guides/jni/spec/jniTOC.html
+
+1. 编译Cls.java的方法
+javac pkg/Cls.java
+
+2. 生成和类对应的头文件的方法
+javah -v -d pkg/jni -jni -classpath $(pwd) pkg.Cls
+
+2.1 编译libpkg_Cls.so的方法
+cd pkg/jni
+make
+cd -
+
+3. 执行Cls.class的方法
+java pkg/Cls
